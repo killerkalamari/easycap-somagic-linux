@@ -1,7 +1,8 @@
 ################################################################################
 # Makefile                                                                     #
 #                                                                              #
-# Makefile for somagic-extract-firmware program                                #
+# Makefile for user space initialization and capture programs for              #
+# Somagic EasyCAP DC60 and Somagic EasyCAP 002                                 #
 # ##############################################################################
 #
 # Copyright 2011, 2012 Jeffry Johnston
@@ -26,10 +27,10 @@ SHELL = /bin/sh
 PREFIX = /usr/local
 BINDIR = $(PREFIX)/bin
 MANDIR = $(PREFIX)/share/man
-PROGRAMS = somagic-extract-firmware
-MANUALS = man/somagic-extract-firmware.1
+PROGRAMS = somagic-init somagic-capture somagic-audio-capture somagic-both somagic-extract-firmware
+MANUALS = man/somagic-init.1 man/somagic-capture.1 man/somagic-extract-firmware.1
 CFLAGS = -s -W -Wall
-LFLAGS = -lgcrypt
+LFLAGS = -lusb-1.0 -lgcrypt
 
 .SUFFIXES:
 .SUFFIXES: .c

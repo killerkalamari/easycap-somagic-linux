@@ -1,0 +1,6 @@
+*.sys
+somagic-audio-capture
+somagic-both
+somagic-capture
+somagic-extract-firmware
+somagic-init
